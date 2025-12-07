@@ -538,6 +538,7 @@ body:has(.carousel-nav-arrow:hover) .carousel-nav-arrow {
     color: #e0e0e0;
     line-height: 1.6;
     font-size: 0.9rem;
+    font-weight: 300;
     text-align: justify;
 }
 

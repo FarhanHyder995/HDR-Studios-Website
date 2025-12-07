@@ -1,0 +1,28 @@
+# --- Mac OS Junk ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Windows Junk ---
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# --- Code Editor Settings (VS Code, etc) ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- Logs and Errors ---
+*.log
+npm-debug.log*
+
+# --- Dependencies (Just in case you use Node later) ---
+node_modules/
+dist/
+
+# --- Environment Variables (Security) ---
+.env
