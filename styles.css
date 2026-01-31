@@ -108,6 +108,35 @@ section {
     display: block;
 }
 
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+.main-header {
+    padding: 25px 0;
+}
+
+.main-nav {
+    padding: 8px;
+    border-radius: 30px;
+}
+
+.main-nav li {
+    margin: 0 5px;
+}
+
+.main-nav a {
+    font-size: 14px;
+    padding: 6px 6px;
+}
+
+.logo-item {
+    margin: 0 5px;
+}
+
+.logo-image {
+    width: 60px;
+}
+}
+
 /* --- 2. Hero Section --- */
 .hero-section {
     height: 100vh;
@@ -152,6 +181,13 @@ section {
     width: 20px;
     height: auto;
     display: block;
+}
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+.hero-image {
+    width: 80%;
+    margin-top: 100px;
+}
 }
 
 /* --- Down Arrow Animation --- */
@@ -260,6 +296,14 @@ section {
 body:has(.carousel-nav-arrow:hover) .carousel-nav-arrow {
     animation-play-state: paused;
     color:var(--brand-yellow);
+}
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+.game-card {
+    flex-shrink: 0; 
+    width: 280px;
+    height: 280px;
+}
 }
 
 /* --- Left Arrow Animation --- */
