@@ -26,3 +26,4 @@ dist/
 
 # --- Environment Variables (Security) ---
 .env
+.DS_Store

@@ -544,7 +544,7 @@ body:has(.carousel-nav-arrow:hover) .carousel-nav-arrow {
 
 .about-intro-section {
     padding-top: 180px;
-    padding-bottom: 80px;
+    padding-bottom: 200px;
     height: 100vh;
 }
 
@@ -568,7 +568,7 @@ body:has(.carousel-nav-arrow:hover) .carousel-nav-arrow {
     display: block;
     aspect-ratio: 4/3;
     object-fit: contain;
-    margin-top: 22px;
+    margin-top: 60px;
 }
 
 /* Text Styles */
@@ -581,7 +581,7 @@ body:has(.carousel-nav-arrow:hover) .carousel-nav-arrow {
 .about-full-text p {
     color: #e0e0e0;
     line-height: 1.6;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 300;
     text-align: justify;
 }
@@ -594,7 +594,7 @@ body:has(.carousel-nav-arrow:hover) .carousel-nav-arrow {
     margin-bottom: 20px;
     line-height: 1.6;
     color: #e0e0e0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 300;
     text-align: justify;
 }
