@@ -861,7 +861,7 @@ body:has(.carousel-nav-arrow:hover) .carousel-nav-arrow {
     }
 
     .main-nav ul {
-        padding: 5px 20px;
+        padding: 5px 10px;
     }
 
     .main-nav a {
@@ -1153,11 +1153,11 @@ body:has(.carousel-nav-arrow:hover) .carousel-nav-arrow {
     }
 
     .main-nav li {
-        margin: 0 5px;
+        margin: 0 2px;
     }
 
     .main-nav ul {
-        padding: 5px 20px;
+        padding: 5px 5px;
     }
 
     .main-nav a {
@@ -1311,7 +1311,7 @@ body:has(.carousel-nav-arrow:hover) .carousel-nav-arrow {
     }
 
     .main-nav ul {
-        padding: 5px 20px;
+        padding: 5px;
     }
 
     .logo-image {
