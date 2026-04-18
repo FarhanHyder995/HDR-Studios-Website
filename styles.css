@@ -809,15 +809,502 @@ body:has(.carousel-nav-arrow:hover) .carousel-nav-arrow {
         flex-direction: column; /* Stack them */
         gap: 50px;
     }
-    
+
     .contact-form-wrapper {
         width: 100%;
         padding: 25px;
     }
-    
+
     /* Make inputs stack vertically on small phones */
     .form-row {
         flex-direction: column;
         gap: 15px;
+    }
+}
+
+
+/* =======================================================
+   MOBILE ADAPTIVE LAYOUT (Tablets & Phones)
+   Added to make the site responsive without altering
+   the existing desktop / laptop presentation.
+   ======================================================= */
+
+/* --- Tablets & Large Phones (≤768px) --- */
+@media (max-width: 768px) {
+
+    /* Global section spacing & typography */
+    section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        margin: 0 0 30px 0;
+    }
+
+    /* Header / Navigation */
+    .main-header {
+        padding: 15px 0;
+    }
+
+    .main-nav {
+        padding: 6px;
+    }
+
+    .main-nav li {
+        margin: 0 3px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    .logo-item {
+        margin: 0 6px;
+    }
+
+    .logo-image {
+        width: 50px;
+    }
+
+    /* Hero */
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 0 60px;
+    }
+
+    .hero-image {
+        width: 85%;
+        margin-top: 40px;
+    }
+
+    .tagline {
+        font-size: 1.15rem;
+        margin-top: 60px;
+    }
+
+    .scroll-down-link {
+        bottom: 25px;
+    }
+
+    /* Game Carousels — break out of content-wrapper padding so the card
+       fills the full viewport width. Only the nav arrows take up space. */
+    .game-carousel-section .content-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .game-carousel-section .section-title,
+    .game-carousel-section .section-subtitle {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .carousel-container {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-wrapper {
+        width: 70%;
+        flex: none;
+        margin: 0;
+        gap: 20px;
+    }
+
+    .game-card {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .carousel-nav-arrow {
+        display: flex;
+        position: relative;
+        top: auto;
+        transform: none;
+        width: 25px;
+        height: 25px;
+        font-size: 25px;
+        flex-shrink: 0;
+        border-radius: 0;
+        background: none;
+        margin: 0 20px;
+    }
+
+    .carousel-nav-arrow.prev {
+        left: auto;
+        animation: none;
+    }
+
+    .carousel-nav-arrow.next {
+        right: auto;
+        animation: none;
+    }
+
+    #second-section {
+        margin-top: -40px;
+    }
+
+    /* CTA */
+    .cta-section {
+        padding-top: 10px;
+        margin-bottom: -30px;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 16px 28px;
+    }
+
+    /* Social */
+    .social-title {
+        font-size: 1.6rem;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon i {
+        font-size: 1.25rem;
+    }
+
+    /* Footer */
+    .main-footer {
+        margin-top: 40px;
+        padding: 30px 20px;
+    }
+
+    .copyright-text {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    /* Games Showcase Page */
+    .showcase-section {
+        padding-top: 140px;
+        padding-bottom: 60px;
+    }
+
+    .showcase-header {
+        margin-bottom: 50px;
+    }
+
+    .showcase-card {
+        padding: 22px;
+        gap: 18px;
+    }
+
+    .card-image-wrapper {
+        max-width: 100%;
+    }
+
+    .game-title {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+
+    .game-description {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .platform-container {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .platform-label {
+        font-size: 0.85rem;
+    }
+
+    .platform-icons i {
+        font-size: 1.25rem;
+    }
+
+    .showcase-divider {
+        width: 80%;
+        margin: 35px auto;
+    }
+
+    #games-page-social {
+        margin-top: -80px;
+    }
+
+    /* About Page */
+    .about-intro-section {
+        height: auto;
+        padding-top: 140px;
+        padding-bottom: 80px;
+    }
+
+    .about-image-wrapper {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .about-img {
+        margin-top: 20px;
+    }
+
+    .about-text-content p,
+    .about-full-text p {
+        font-size: 0.95rem;
+    }
+
+    .about-contact-section {
+        margin-top: 0;
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+
+    .about-intro-section .scroll-down-link {
+        display: none; /* Hide floating arrow to avoid overlap on stacked layout */
+    }
+
+    /* Contact Page */
+    .contact-page-section {
+        padding-top: 140px;
+        padding-bottom: 60px;
+    }
+
+    .contact-info-wrapper {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .contact-social-icons {
+        justify-content: center;
+    }
+
+    .info-title {
+        font-size: 1.6rem;
+    }
+
+    .info-subtitle {
+        margin-bottom: 30px;
+    }
+
+    .info-text {
+        font-size: 1rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 22px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Prevent 100%-width inputs from overflowing their padded wrapper */
+    .form-input {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    .main-contact-form {
+        width: 100%;
+    }
+}
+
+/* --- Small Phones (≤480px) --- */
+@media (max-width: 480px) {
+
+    .section-title {
+        font-size: 1.35rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.85rem;
+    }
+
+    /* Header / Navigation fits narrow screens */
+    .main-header {
+        padding: 12px 0;
+    }
+
+    .main-nav {
+        padding: 5px;
+    }
+
+    .main-nav li {
+        margin: 0 1px;
+    }
+
+    .main-nav a {
+        font-size: 11px;
+        padding: 6px 7px;
+    }
+
+    .logo-item {
+        margin: 0 3px;
+    }
+
+    .logo-image {
+        width: 42px;
+    }
+
+    /* Hero */
+    .hero-section {
+        padding: 90px 0 50px;
+    }
+
+    .hero-image {
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    .tagline {
+        font-size: 1rem;
+        margin-top: 45px;
+    }
+
+    /* Carousel — card dimensions inherited from the ≤768px rules. */
+
+    /* CTA */
+    .cta-button {
+        font-size: 0.95rem;
+        padding: 14px 22px;
+    }
+
+    /* Social */
+    .social-title {
+        font-size: 1.4rem;
+    }
+
+    .social-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .social-icon i {
+        font-size: 1.1rem;
+    }
+
+    /* Footer */
+    .main-footer {
+        padding: 25px 15px;
+        margin-top: 30px;
+    }
+
+    .copyright-text {
+        font-size: 0.75rem;
+    }
+
+    /* Games Showcase */
+    .showcase-section {
+        padding-top: 120px;
+    }
+
+    .showcase-card {
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .game-title {
+        font-size: 1.25rem;
+    }
+
+    .game-description {
+        font-size: 0.85rem;
+        line-height: 1.55;
+    }
+
+    .showcase-divider {
+        width: 85%;
+        margin: 28px auto;
+    }
+
+    /* About */
+    .about-intro-section {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .about-image-wrapper {
+        max-width: 260px;
+    }
+
+    .about-text-content p,
+    .about-full-text p {
+        font-size: 0.9rem;
+    }
+
+    .email-button {
+        font-size: 1.05rem;
+        padding: 13px 22px;
+    }
+
+    /* Contact */
+    .contact-page-section {
+        padding-top: 120px;
+    }
+
+    .info-title {
+        font-size: 1.4rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 18px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-input {
+        padding: 12px;
+        font-size: 0.95rem;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    .form-textarea {
+        min-height: 120px;
+    }
+
+    .form-submit-btn {
+        font-size: 1rem;
+        padding: 14px 20px;
+    }
+}
+
+/* --- Extra Small Phones (≤360px) --- */
+@media (max-width: 360px) {
+
+    .main-nav a {
+        font-size: 10px;
+        padding: 5px 5px;
+    }
+
+    .main-nav li {
+        margin: 0;
+    }
+
+    .logo-image {
+        width: 36px;
+    }
+
+    .tagline {
+        font-size: 0.95rem;
     }
 }
