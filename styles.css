@@ -1310,3 +1310,129 @@ body:has(.carousel-nav-arrow:hover) .carousel-nav-arrow {
         font-size: 0.95rem;
     }
 }
+
+/* ===============================================================
+   TABLET LAYOUT — portrait & landscape (768 px – 1024 px)
+   Placed after all mobile rules so it wins at the 768 px boundary.
+   =============================================================== */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* ─── Hero ────────────────────────────────────────────────────
+       Lock to exactly 100 vh so the bounce arrow always anchors to
+       the very bottom of the screen without overlapping anything.  */
+    .hero-section {
+        height: 100vh;
+        min-height: unset;
+        padding: 0;
+    }
+
+    .hero-image {
+        width: 65%;
+        max-width: 550px;
+        margin-top: 120px;
+    }
+
+    .tagline {
+        font-size: 1.3rem;
+        margin-top: 70px;
+    }
+
+    /* Re-apply the correct centred transform so it matches the
+       bounce keyframes and sits dead-centre at the bottom.        */
+    .scroll-down-link {
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bounce 2s infinite;
+    }
+
+    /* ─── Carousel ────────────────────────────────────────────────
+       Show exactly 2 cards side-by-side with no clipping.
+       Arrows stay absolutely-positioned inside the container so
+       they never overflow or clip against the viewport edge.       */
+    .game-carousel-section .content-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .game-carousel-section .section-title,
+    .game-carousel-section .section-subtitle {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .carousel-container {
+        padding: 0 55px;
+        justify-content: flex-start;
+        overflow: visible;
+        box-sizing: border-box;
+    }
+
+    .carousel-wrapper {
+        flex: 1;
+        width: 100%;
+        margin: 0;
+        gap: 16px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    /* Each card takes exactly half the wrapper width so 2 fit
+       perfectly; the 8 px accounts for half the 16 px gap.        */
+    .game-card {
+        flex: 0 0 calc(50% - 8px);
+        width: calc(50% - 8px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0;
+        scroll-snap-align: start;
+        box-sizing: border-box;
+    }
+
+    /* Restore the desktop absolute positioning for the arrows.    */
+    .carousel-nav-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+        border-radius: 50%;
+    }
+
+    .carousel-nav-arrow.prev {
+        left: 8px;
+        animation: moveleft 2s infinite;
+    }
+
+    .carousel-nav-arrow.next {
+        right: 8px;
+        animation: moveright 2s infinite;
+    }
+
+    #second-section {
+        margin-top: -50px;
+    }
+}
+
+/* ─── Landscape tablets (short viewport, ~768 px tall) ─────── */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    /* Smaller logo and tighter spacing to fit comfortably in the
+       reduced viewport height of a landscape-mode tablet.         */
+    .hero-image {
+        width: 45%;
+        max-width: 420px;
+        margin-top: 70px;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+        margin-top: 30px;
+    }
+
+    .scroll-down-link {
+        bottom: 15px;
+    }
+}
